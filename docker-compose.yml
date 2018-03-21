@@ -1,0 +1,29 @@
+version: '2.1'
+
+services:
+ web:
+  build: .
+  command: ["/src/start.sh"]
+  volumes:
+   - .:/src
+  ports:
+   - "8080:8080"
+  depends_on:
+    db:
+      condition: service_healthy
+  
+ db:
+  
+  image: postgres:9.6
+  container_name: psg01
+  restart: always
+  environment:
+      POSTGRES_DB: teonite
+      POSTGRES_USER: jaro
+      POSTGRES_PASSWORD: ramka123
+  healthcheck:
+    test: ["CMD-SHELL", "pg_isready -U postgres"]
+    interval: 10s
+    timeout: 10s
+    retries: 3
+  

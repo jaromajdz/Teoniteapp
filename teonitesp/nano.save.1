@@ -1,0 +1,8 @@
+with connection.cursor() as cursor:
+	cursor.execute("""
+	SELECT id_author
+	FROM go_authors
+	WHERE regexp_replace(lower(author), ' ','')='andrzejpiasecki';
+	"""
+	)
+	row=cursor.fetchone()

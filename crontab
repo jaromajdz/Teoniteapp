@@ -1,0 +1,15 @@
+PYTHONUNBUFFERED=1
+PYTHON_VERSION=3.6.4
+PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/var/spool/cron/crontabs
+SHELL=/bin/sh
+LANG=C.UTF-8
+SHLVL=1
+HOME=/root
+5 * * * * root sh /src/sc.sh >> /var/log/cron.log 2>&1
+#
+
+
+
+
+
