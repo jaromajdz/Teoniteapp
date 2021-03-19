@@ -1,7 +1,7 @@
 
 beautifulsoup4==4.6.0
 Django==2.0.2
-djangorestframework==3.7.7
+djangorestframework==3.11.2
 Markdown==2.6.11
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
